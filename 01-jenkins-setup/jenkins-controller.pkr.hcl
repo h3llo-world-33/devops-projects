@@ -1,6 +1,6 @@
 variable "ami_id" {
   type    = string
-  default = "ami-0735c191cf914754d"
+  default = "ami-05134c8ef96964280"
 }
 
 variable "efs_mount_point" {
@@ -14,7 +14,7 @@ locals {
 
 source "amazon-ebs" "jenkins" {
   ami_name      = "${local.app_name}"
-  instance_type = "t2.micro"
+  instance_type = "t2.medium"
   region        = "us-west-2"
   availability_zone = "us-west-2a"
   source_ami    = "${var.ami_id}"

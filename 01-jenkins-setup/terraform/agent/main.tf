@@ -9,6 +9,6 @@ module "ec2_instance" {
   ami_id             = "ami-05134c8ef96964280"
   instance_type      = "t2.small"
   key_name           = "techiescamp"
-  subnet_ids         = ["subnet-058a7514ba8adbb07", "subnet-0dbcd1ac168414927", "subnet-032f5077729435858"]
+  subnet_ids         = ["subnet-0e21b32261276eb5c", "subnet-0f745b45356f7f113", "subnet-0deed58b2f81bebae"]
   instance_count     = 1
 }

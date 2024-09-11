@@ -1,6 +1,6 @@
 variable "ami_id" {
   type    = string
-  default = "ami-0735c191cf914754d"
+  default = "ami-05134c8ef96964280"
 }
 
 variable "public_key_path" {

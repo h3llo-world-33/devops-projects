@@ -21,7 +21,7 @@
 
 - name: Install AWS CLI using pip
   become: true
-  snapd:
+  snap:
     name: awscli
     state: latest
 

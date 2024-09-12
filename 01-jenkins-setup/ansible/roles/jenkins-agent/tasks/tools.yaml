@@ -11,7 +11,7 @@
 
 - name: Install boto3 using pip3
   become: true
-  pip:
+  apt:
     name: python3-boto3
     state: present
 

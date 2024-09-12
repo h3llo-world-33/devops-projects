@@ -26,11 +26,6 @@
     name: ansible
     state: latest
 
-- name: Install the amazon.aws collection
-  ansible.builtin.command: ansible-galaxy collection install amazon.aws
-  register: collection_install
-  changed_when: collection_install.rc != 0
-
 - name: Add HashiCorp GPG key
   become: yes
   shell: "wget -qO- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg"

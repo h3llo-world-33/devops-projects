@@ -23,7 +23,7 @@
   become: true
   snap:
     name: awscli
-    state: latest
+    state: present
 
 - name: Install Java JDK 17
   apt:

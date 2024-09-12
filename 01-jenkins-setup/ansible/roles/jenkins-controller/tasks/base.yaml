@@ -15,16 +15,15 @@
 
 - name: Install boto3 using pip3
   become: true
-  pip:
-    name: boto3
+  apt:
+    name: python3-boto3
     state: present
 
 - name: Install AWS CLI using pip
   become: true
-  pip:
+  snapd:
     name: awscli
     state: latest
-    executable: pip3
 
 - name: Install Java JDK 17
   apt:

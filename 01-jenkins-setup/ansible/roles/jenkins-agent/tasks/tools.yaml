@@ -12,15 +12,15 @@
 - name: Install boto3 using pip3
   become: true
   pip:
-    name: boto3
+    name: python3-boto3
     state: present
 
-- name: Install AWS CLI using pip
+- name: Install AWS CLI using snap
   become: true
-  pip:
-    name: awscli
-    state: latest
-    executable: pip3
+  snap:
+    name: aws-cli
+    classic: yes
+    state: present
 
 - name: Install Ansible
   pip:

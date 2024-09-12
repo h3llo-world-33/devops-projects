@@ -19,10 +19,11 @@
     name: python3-boto3
     state: present
 
-- name: Install AWS CLI using pip
+- name: Install AWS CLI using snap
   become: true
   snap:
-    name: awscli --classic
+    name: aws-cli
+    classic: yes
     state: present
 
 - name: Install Java JDK 17

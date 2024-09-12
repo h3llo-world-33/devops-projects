@@ -23,7 +23,7 @@
     state: present
 
 - name: Install Ansible
-  pip:
+  apt:
     name: ansible
     state: latest
 

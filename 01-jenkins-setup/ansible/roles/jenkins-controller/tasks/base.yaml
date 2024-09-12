@@ -22,7 +22,7 @@
 - name: Install AWS CLI using pip
   become: true
   snap:
-    name: awscli
+    name: awscli --classic
     state: present
 
 - name: Install Java JDK 17

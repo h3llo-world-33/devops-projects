@@ -1,6 +1,6 @@
 variable "ami_id" {
   type    = string
-  default = "ami-05134c8ef96964280"
+  default = "ami-075686beab831bb7f"
 }
 
 variable "public_key_path" {
@@ -14,7 +14,7 @@ locals {
 
 source "amazon-ebs" "jenkins" {
   ami_name      = "${local.app_name}"
-  instance_type = "t2.medium"
+  instance_type = "t2.micro"
   region        = "us-west-2"
   availability_zone = "us-west-2a"
   source_ami    = "${var.ami_id}"

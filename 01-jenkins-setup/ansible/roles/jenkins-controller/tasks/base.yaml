@@ -19,12 +19,20 @@
     name: python3-boto3
     state: present
 
-- name: Install AWS CLI using snap
+- name: Ensure snapd is installed
+  apt:
+    name: snapd
+    state: present
   become: true
+  when: ansible_os_family == "Debian"
+
+# Install AWS CLI using snap with classic confinement
+- name: Install AWS CLI using snap
   snap:
     name: aws-cli
     classic: yes
     state: present
+  become: true
 
 - name: Install Java JDK 17
   apt:
